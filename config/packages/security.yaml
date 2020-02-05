@@ -17,6 +17,16 @@ security:
         main:
             anonymous: lazy
 
+            form_login:
+                login_path: 'login'
+                default_target_path: ''
+                check_path: 'login_check'
+
+            logout:
+                path: 'logout'
+                target: ''
+
+
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 
