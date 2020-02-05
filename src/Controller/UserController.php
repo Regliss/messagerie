@@ -27,7 +27,7 @@ class UserController extends AbstractController
 		}
 
 
-		return $this -> render('user2/login.html.twig', array(
+		return $this -> render('user/login.html.twig', array(
 			'lastUsername' => $lastUsername,)
 		);
 
@@ -57,8 +57,25 @@ class UserController extends AbstractController
 			return $this -> redirectToRoute('index');
 		}
 
-		return $this -> render('user2/register.html.twig', array(
+		return $this -> render('user/register.html.twig', array(
 			'userForm' => $form -> createView()
 		));
+	}
+
+	/**
+	*Route nécessaire pour le fonctionnement de la sécurité de ma connexion de SF
+	* @Route("/login_check", name="login_check")
+	*/
+	public function loginCheck(){
+
+	}
+
+	/**
+	*@Route("/logout", name="logout")
+	*
+	*/
+	public function logout(){
+		return $this -> redirectToRoute('index');
+
 	}
 }
