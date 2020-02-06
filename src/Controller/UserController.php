@@ -14,7 +14,7 @@ use App\Form\UserType;
 class UserController extends AbstractController
 {
     /**
-	*@Route("/index", name="index")
+	*@Route("/", name="index")
 	*
 	*/
 	public function login(AuthenticationUtils $auth){
