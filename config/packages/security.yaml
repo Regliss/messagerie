@@ -21,7 +21,7 @@ security:
 
             form_login:
                 login_path: 'index'
-                default_target_path: 'message'
+                default_target_path: 'message_groupe'
                 check_path: 'login_check'
 
             logout:

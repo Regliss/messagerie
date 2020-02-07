@@ -18,7 +18,7 @@ class AppFixtures extends Fixture
 
             $utilisateur -> setUsername('Utilisateur' . $i);
             $utilisateur -> setPhoto('Photo'. $i . '.jpg');
-            $utilisateur -> setPassword('123456');
+            $utilisateur -> setPassword('$argon2id$v=19$m=65536,t=4,p=1$cHZpRFZWM2N3NHZ1Y1BzNA$osY1oBDVkG1aKPIA67D/mom4rAhveJB0If2XaXHG72M');
             $utilisateur -> setEmail('user' . $i . '@gmail.com');
             $manager -> persist($utilisateur);
         }
