@@ -20,7 +20,7 @@ security:
             anonymous: lazy
 
             form_login:
-                login_path: 'login'
+                login_path: 'index'
                 default_target_path: 'message'
                 check_path: 'login_check'
 
