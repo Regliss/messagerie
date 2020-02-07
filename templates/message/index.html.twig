@@ -8,44 +8,13 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
- {% for u in utilisateurs %}
-        <!-- START VIGNETTE ARTICLE -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="{{  path('show', { id : u.id }) }}">
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
 
-                    <img class="card-img-top" src="{{ asset('/photo/' ~ u.photo )  }}" alt="">
-<!-- asset() : chemin absolu vers public (img/css/js/fonts) -->
-
-              </a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="{{  path('show', { id : u.id }) }}">{{ u.username }}</a>
-                </h4>
-                <h5>Par {{ p.user }}</h5>
-                <p class="card-text">{{ u.messages | slice(0, 20) }}...</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-
-              <div class="card-footer">
-                <a href="{{  path('show', { id : u.id }) }}" class="btn btn-secondary">Lire les messages</a>
-              </div>
-
-            </div>
-          </div>
-          <!-- END VIGNETTE ARTICLE -->
-          {% endfor %}
-
-
-        </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
-    </div>
-    <!-- /.row -->
-
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/Users/Thomas/Documents/cour/Ynov/Symfony/messagerie/src/Controller/MessageController.php'|file_link(0) }}">src/Controller/MessageController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/Users/Thomas/Documents/cour/Ynov/Symfony/messagerie/templates/message/index.html.twig'|file_link(0) }}">templates/message/index.html.twig</a></code></li>
+    </ul>
+</div>
 {% endblock %}

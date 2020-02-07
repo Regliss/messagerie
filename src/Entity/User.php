@@ -46,20 +46,12 @@ class User implements UserInterface
     private $photo;
 
     /**
-<<<<<<< HEAD
-     * @ORM\Column(type="string", length=255, unique=true, nullable=true)
-=======
      * @ORM\ManyToMany(targetEntity="App\Entity\Groupe", inversedBy="users")
->>>>>>> 20440b84651c124632c69b67b400b1b217749550
      */
     private $groupes;
 
     /**
-<<<<<<< HEAD
-     * @ORM\Column(type="string", length=180, unique=true, nullable=true)
-=======
      * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="user", orphanRemoval=true)
->>>>>>> 20440b84651c124632c69b67b400b1b217749550
      */
     private $messages;
 
