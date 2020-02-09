@@ -6,6 +6,9 @@ use App\Entity\Groupe;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\User;
 
 class GroupeType extends AbstractType
 {
@@ -14,7 +17,7 @@ class GroupeType extends AbstractType
         $builder
         -> add('nom')
         -> add('photo')
-        -> add('users', UserType::class, array(
+        -> add('users', EntityType::class, array(
             'class' => User::class,
             'multiple' => true,
             'expanded' => true,

@@ -33,9 +33,11 @@ public function creationGroupe(Request $request){
             //$groupe -> addUser($user);
             $user -> addGroupe($groupe);
         }
-        $manager -> flush();
+        $manager -> flush($groupe);
     }
-    $this -> render();
+        return $this -> render('groupe/groupeAdd.html.twig', array(
+            'groupeForm' => $form -> createView()
+        ));
 
 }
 
