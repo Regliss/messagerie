@@ -7,6 +7,30 @@
 </style>
 
 <div class="example-wrapper">
-   
+   <h1> Création de groupe </h1>
+
+
+	{{ form_start(groupeForm) }}
+
+	{{ form_row(groupeForm.Nom de Groupe) }}
+
+                    {% for u in user %}
+						<li class="active">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="{{ asset('/Photo/' ~ u.photo) }}" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>{{ u.username }}</span>
+									<p>Selectionner {{ u.username }}</p>
+								</div>
+							</div>
+						</li>
+					{% endfor %}
+
+
+	{{ form_end(groupeForm) }}
+
 </div>
 {% endblock %}
